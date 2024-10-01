@@ -5,9 +5,10 @@ let button = document.getElementById("button")
 
 
 button.onclick = () => {
-  if(chrome.runtime){
+  try {
+    console.log(chrome.runtime.aaa)
     tips.textContent = "AAAAAAAAA"
-  } else {
+  } catch(err){
     tips.textContent = "BBBBBBBBB"
   }
 }
